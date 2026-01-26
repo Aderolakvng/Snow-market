@@ -45,7 +45,7 @@ body {
 
 .nav a { text-decoration: none; font-size: 16px; color: #333; font-weight: 600; transition: transform .18s ease, color .12s ease; padding: 8px 10px; border-radius: 8px }
 
-.nav a:hover, .nav a.active { color: var(--teal); background: rgba(11,114,130,0.04); transform: translateY(-2px) }
+.nav a:hover, .nav a.active { color: var(--teal); background: rgba(11,114,130,0.04); }
 
 /* =========================================================
    GLOBAL HEADINGS

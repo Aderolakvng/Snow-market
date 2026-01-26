@@ -138,7 +138,7 @@ nav ul li { position: relative; display:flex; align-items:center }
 }
 
 /* Make the toggle more compact */
-.nav-dropdown-toggle{font-size:14px;padding:6px 10px;border-radius:8px;background:transparent;border:1px solid transparent;transition:background .12s ease, border-color .12s ease}
+.nav-dropdown-toggle{font-size:14px;padding:2px 4px;border-radius:8px;background:transparent;border:1px solid transparent; margin-top: 20px; transition:background .12s ease, border-color .12s ease}
 .nav-dropdown-toggle:hover{background:rgba(12,140,233,0.04);border-color:rgba(12,140,233,0.06)}
 .nav-dropdown-toggle:focus{outline:none;box-shadow:0 6px 18px rgba(12,140,233,0.12);border-radius:8px}
 .cat-link:focus{outline:none;box-shadow:0 6px 20px rgba(11,114,130,0.12);border-radius:8px}
@@ -149,10 +149,13 @@ nav ul li { position: relative; display:flex; align-items:center }
 nav ul{transition: max-height .28s ease, opacity .22s ease; overflow: visible}
 nav ul.show-nav{display:flex;opacity:1;max-height:760px}
 @media (max-width:900px){
-  .nav-dropdown{position:static;box-shadow:none;padding:12px;margin-top:8px;border-radius:8px}
-  .nav-dropdown-inner{grid-template-columns:1fr;gap:12px}
-  .nav-dropdown .cat-group{border-right:none;padding:0}
-  .sub-thumb{width:44px;height:44px;flex:0 0 44px}
+  .nav-dropdown{position:absolute;top:100%;left:0;right:0;box-shadow:0 30px 80px rgba(10,20,30,0.20);padding:12px;margin-top:8px;border-radius:8px;z-index:1200}
+  .nav-dropdown-inner{display:flex;flex-direction:column;gap:12px}
+  .nav-dropdown .cat-group{border-right:none;padding:0;min-height:auto}
+  .sub-thumb{width:50px;height:50px;flex:0 0 50px}
+  .cat-link{padding:12px;display:flex;align-items:center}
+  .sub-title{font-size:16px}
+  .sub-count{font-size:14px}
   .dropdown-cta{justify-content:flex-start}
 
   /* Mobile: transparent header and nav with blur */
