@@ -8,7 +8,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .header {
-    padding: 15px 30px;
+    padding: 10px 10px;
   }
 }
 
@@ -18,12 +18,59 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   .nav ul {
     gap: 12px;
   }
 
   .hero h1 {
     font-size: 36px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .logo a {
+    font-size: 26px;
+  }
+
+  /* Ensure nav displays horizontally */
+  .nav {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  .header {
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: none;
+  }
+
+  .header.scrolled {
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav, .nav ul, .nav a {
+    background: transparent !important;
   }
 }
 
@@ -35,7 +82,14 @@
     width: 96%;
   }
 
-  .product-card img { height: 160px; }
+  body {
+    overflow-x: hidden;
+  }
+
+  .product-card img {
+    height: 140px;
+    object-fit: contain;
+  }
 
   .hero {
     height: 260px;
@@ -46,16 +100,109 @@
   }
 
   .header {
-    flex-direction: column;
-    text-align: center;
+    padding: 10px 10px;
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: none;
+  }
+
+  .header.scrolled {
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav, .nav ul, .nav a {
+    background: transparent !important;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .logo a {
+    font-size: 14px;
+  }
+
+  .nav a {
+    font-size: 8px;
+    padding: 1px 1px;
   }
 
   .nav ul {
-    margin-top: 10px;
+    gap: 0px;
+    flex-wrap: nowrap;
   }
 
-  /* ensure nav toggle visible and nav links usable */
-  #menuToggle{display:inline-flex}
-  .nav{display:none}
-  .nav.show-nav{display:flex}
+  /* Hide menu toggle and show nav fully */
+  #menuToggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+}
+
+/* VERY SMALL MOBILE — 380px */
+@media (max-width: 380px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    width: 98%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .product-card img {
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .hero {
+    height: 220px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .header {
+    padding: 8px 8px;
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: none;
+  }
+
+  .header.scrolled {
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    padding: 4px 5px;
+  }
+
+  .nav ul {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .nav, .nav ul, .nav a {
+    background: transparent !important;
+  }
 }

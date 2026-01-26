@@ -187,13 +187,13 @@ h3 { font-size: 18px; font-weight: 700; color: #102c3c; margin: 12px 0 }
 .product-card {
   background: #ffffff;
   border-radius: 14px;
-  padding: 16px;
+  padding: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 128, 128, 0.06);
-  min-height: 220px;
+  min-height: 100px;
 }
 
 .product-card::before {
@@ -220,9 +220,9 @@ h3 { font-size: 18px; font-weight: 700; color: #102c3c; margin: 12px 0 }
 
 .product-card img {
   width: 100%;
-  height: 120px;
+  height: 180px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.28s ease;
 }
 
@@ -231,7 +231,7 @@ h3 { font-size: 18px; font-weight: 700; color: #102c3c; margin: 12px 0 }
 }
 
 .product-card h3 {
-  margin: 12px 0 6px;
+  margin: 10px 0 6px;
   font-size: 16px;
   line-height: 1.15;
 }
@@ -352,6 +352,47 @@ h3 { font-size: 18px; font-weight: 700; color: #102c3c; margin: 12px 0 }
   padding: 3px 6px;
   border-radius: 50%;
   font-weight: 600;
+}
+
+/* Mobile floating cart button */
+.mobile-cart { display: none; }
+
+@media (max-width: 767px) {
+  /* hide cart inside the collapsed navbar to avoid duplication */
+  nav .cart-li { display: none !important; }
+
+  .mobile-cart {
+    display: inline-flex;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+    background: teal;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    text-decoration: none;
+  }
+
+  .mobile-cart svg { width: 26px; height: 26px; color: #fff; display: block; }
+
+  .mobile-cart .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 999px;
+    font-weight: 700;
+    display: none;
+  }
+
 }
 
 .menu-toggle {

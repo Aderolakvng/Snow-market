@@ -18,7 +18,7 @@ function initEmailTransport() {
   } catch (e) {
     console.error('Email transport init failed', e);
   }
-}
+};
 initEmailTransport();
 
 function genTrackingNumbers(count) {
